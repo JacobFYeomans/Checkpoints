@@ -139,10 +139,13 @@ public class S_FPS_Move : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Entered");
         if (other.gameObject.CompareTag("Killzone"))
         {
             thePlayer.transform.position = respawnPoint.transform.position;
-            Debug.Log("hello");
+            //maybe character controller.moveto??????
+            //positional deltas, do math. x2 -x1 over y2 -y1
+            Debug.Log("Triggered");
         }
     }
 
