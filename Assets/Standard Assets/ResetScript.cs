@@ -22,7 +22,9 @@ public class ResetScript : MonoBehaviour
             Debug.Log(respawnPoint.transform.position);
             Vector3 deltaMovement = respawnPoint.transform.position - player.transform.position;
             player.detectCollisions = false;
+            //player.enabled = false;
             player.Move(deltaMovement); //diable collision then renable afterwards
+            //player.enabled = true;
             player.detectCollisions = true;
         }
         
